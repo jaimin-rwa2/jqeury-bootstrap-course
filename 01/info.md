@@ -1,0 +1,13 @@
+- Intro of JQ
+    - what is Jquery
+    - where to use Jquery
+        - refrance reload animation
+        - sliding animation menu
+        - slider for photos
+        - back to top btn
+        - theam changer
+     - How to use Jquery
+        - jquery cdn or ajex cdn?
+    - How it's work
+    - Jquery Selector
+    - Jquery Syntax
