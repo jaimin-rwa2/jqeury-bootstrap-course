@@ -8,10 +8,34 @@
 
 <body>
 
-    <button id="s-btn">single click</button>
-    <button class="db-btn">double click</button>
-    <button class="mouse-1">mouseenter</button>
-    <button class="mouse-2">mouseleave</button>
+    <button class="btn1">pink</button>
+
+    <br><br>
+    <button id="c1">green box</button>
+    <button id="c2">yellow box</button>
+    <br><br>
+    <div class="box">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam natus provident aliquam temporibus, numquam
+            error. Dicta voluptates, sed explicabo quidem et, quas modi minus eius deserunt nam, qui facilis atque?</p>
+    </div>
+
+    <br><br>
+
+    <button id="s1">slide up</button>
+    <button id="s2">slide down</button>
+    <button id="s3">slide toggle</button>
+    <br><br>
+    <div class="box2">
+    </div>
+
+    <br><br>
+
+    <button id="f1">fade In</button>
+    <button id="f2">fade Out</button>
+    <button id="f3">fade toggle</button>
+    <br><br>
+    <div class="box3">
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
@@ -19,21 +43,56 @@
         //     // $(".class").hide();
         // });
 
-        $("#s-btn").click(function () {
-            alert("singel click");
-        });
+        // $(".btn1").click(function () {
+        //     $("body").addClass("color1")
+        // })
 
-        $(".db-btn").dblclick(function () {
-            alert("double click");
-        });
+        $(".btn1").click(function () {
+            $("body").toggleClass("color1")
+        })
 
-        $(".mouse-1").mouseenter(function () {
-            alert("mouseenter click");
-        });
+        $("#c1").click(function () {
+            $(".box").css({
+                "background-color": "green",
+                "color": "yellow",
+                "font-size": "20px",
+                "transition": "1s"
+            })
+        })
 
-        $(".mouse-2").mouseleave(function () {
-            alert("mouseleave click");
-        });
+        $("#c2").click(function () {
+            $(".box").css({
+                "background-color": "yellow",
+                "color": "green",
+                "font-size": "25px",
+                "transition": "1s"
+            })
+        })
+
+        $("#s1").click(function () {
+            $(".box2").slideUp("slow")
+        })
+
+        $("#s2").click(function () {
+            $(".box2").slideDown("fast")
+        })
+
+        $("#s3").click(function () {
+            $(".box2").slideToggle(2000)
+        })
+
+        $("#f1").click(function () {
+            $(".box3").fadeIn("slow")
+        })
+
+        $("#f2").click(function () {
+            $(".box3").fadeOut("fast")
+        })
+
+        $("#f3").click(function () {
+            $(".box3").fadeToggle(2000)
+        })
+
     </script>
 </body>
 

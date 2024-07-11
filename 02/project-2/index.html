@@ -13,6 +13,17 @@
     <button class="mouse-1">mouseenter</button>
     <button class="mouse-2">mouseleave</button>
 
+    <br><br>
+    <button id="show">show box</button>
+    <button id="hide">hide box</button>
+    <br><br>
+    <div class="box"></div>
+    <br>
+    <button class="for-p">toggel p</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nesciunt architecto ipsa quibusdam laboriosam
+        itaque vel nobis dicta? Fugit quasi accusamus quaerat alias minima illo quidem debitis unde cupiditate quisquam.
+    </p>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
         // $("selector").events(function () {
@@ -33,6 +44,19 @@
 
         $(".mouse-2").mouseleave(function () {
             alert("mouseleave click");
+        });
+
+        $("#hide").click(function () {
+            $(".box").hide("slower");
+        });
+
+        $("#show").click(function () {
+            $(".box").show("faster");
+        });
+
+        $(".for-p").click(function () {
+            $("p").toggle("slower");
+            // toggel is noraml effect
         });
     </script>
 </body>
