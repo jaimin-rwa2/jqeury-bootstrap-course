@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>accordian</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: poppins;
+        }
+
+        .container{
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        h2{ 
+            background-color: gainsboro;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .accordian-item{
+            margin-bottom: 5px;
+            
+        }
+
+        .accordian-content{
+            border: 1px solid rgb(186, 186, 186);
+            margin: 0 auto;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="accordian">
+        <div class="container">
+            <div class="accordian-item">
+                <h2>Accordian-1</h2>
+                <div class="accordian-content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, nostrum inventore odio corporis cupiditate mollitia sunt quam recusandae aliquid rem quaerat id reprehenderit distinctio magni incidunt similique impedit nesciunt autem.</p>
+                </div>
+            </div>
+            <div class="accordian-item">
+                <h2>Accordian-2</h2>
+                <div class="accordian-content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, nostrum inventore odio corporis cupiditate mollitia sunt quam recusandae aliquid rem quaerat id reprehenderit distinctio magni incidunt similique impedit nesciunt autem.</p>
+                </div>
+            </div>
+            <div class="accordian-item">
+                <h2>Accordian-3</h2> 
+                <div class="accordian-content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, nostrum inventore odio corporis cupiditate mollitia sunt quam recusandae aliquid rem quaerat id reprehenderit distinctio magni incidunt similique impedit nesciunt autem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script>
+         $(".accordian-item h2").click(function(){
+            // $(".accordian-content").slideUp();
+            $(this).parent(".accordian-item").find(".accordian-content").slideToggle();
+            // $(this).parent(".accordian-item").prevAll(".accordian-item").find(".accordian-content").slideUp();
+            // $(this).parent(".accordian-item").nextAll(".accordian-item").find(".accordian-content").slideUp();
+            $(this).parent(".accordian-item").siblings(".accordian-item").children(".accordian-content").slideUp();
+            
+         });
+    </script>
+</body>
+</html>
