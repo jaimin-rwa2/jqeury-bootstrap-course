@@ -21,9 +21,7 @@ body{
 .items{
     background-color: black;
     color: white;
-    margin: 10px 20px;
-    padding: 20px;
-    display: inline-block;
+    margin: 0 40px;
 }
 
 .slick-prev::before, .slick-next::before{
