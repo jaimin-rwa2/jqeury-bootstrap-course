@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: deepskyblue;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 0;
+}
+.slider{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.items{
+    background-color: black;
+    color: white;
+    margin: 0 40px;
+}
+
+.slick-prev::before, .slick-next::before{
+    color: red;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.slick-prev, .slick-next{
+    width: initial;
+    height: initial;
+}
+
+.slick-dots li button::before{
+    font-size: 20px ;
+}

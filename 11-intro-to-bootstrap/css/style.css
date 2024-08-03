@@ -1,0 +1,5 @@
+[class*="col"]{
+    padding: 1rem;
+    background-color: aqua;
+    border: 1px solid white;
+}
