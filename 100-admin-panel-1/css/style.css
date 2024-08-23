@@ -5,7 +5,9 @@
 }
 
 :root {
-    --theam-light-green: rgba(36, 105, 92, 0.1);
+    --theam-light-green-100: rgba(36, 105, 92, 0.1);
+    --theam-light-green-200: rgba(36, 105, 92, 0.2);
+    --theam-green: #24695c;
     --theme-white: #ffffff;
     --theme-light-gray: #e6edef;
     --theme-black: #000000;
@@ -117,10 +119,15 @@ ol {
 
 /* === Header === */
 
+header{
+    box-shadow: var(--theme-light-gray) 0px 10px 36px 0px, var(--theme-light-gray) 0px 0px 0px 1px;
+}
+
+
 .header-left{
     width: 300px;
     padding: 20px 30px;
-    border: 1px solid var(--theme-light-gray);
+    border-right: 1px solid var(--theme-light-gray);
 }
 
 .header-left i{
@@ -130,7 +137,7 @@ ol {
 }
 
 .header-left i:hover{
-    background-color: var(--theam-light-green);
+    background-color: var(--theam-light-green-100);
     border-radius: 4px;
 }
 
@@ -147,10 +154,100 @@ ol {
 }
 
 ::placeholder{
+    /* new to learn */
     color: gray;
     font-size: 16px;
 }
 
-.header-right .icons i{
-    padding: 10px;
+.header-right .icons li{
+    margin: 20px;
+}
+
+.header-right .icons li a{
+    color: var(--theme-black);
+}
+
+.header-right .icons li:last-child a{
+    background-color: var(--theam-light-green-100);
+    border-radius: 4px;
+    color: var(--theam-green);
+    padding: 8px 10px;
+}
+
+.header-right .icons li:last-child a i{
+   padding-right: 10px;
+}
+
+/* === main === */
+main{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    padding: 20px;
+    background-color: gold;
+    transition: 0.4s;
+}
+
+/* === aside === */
+aside{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    bottom: (100% - 76px);
+    border-right: 1px solid var(--theme-light-gray);
+    transition: 0.4s;
+}
+
+.aside-slide{
+    transform: translateX(-300px);
+}
+
+.aside-slide + main{
+    width: 100%;
+    margin-left: 0px;
+}
+
+
+.aside-top{
+    padding: 24px 0;
+    border-bottom: 1px solid var(--theme-light-gray);
+}
+
+.aside-top .profile img{
+    position: relative;
+    border: 8px solid var(--theam-light-green-200);
+    border-radius: 50%;
+    display: inline;
+}
+
+.aside-top .profile .round{
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+    background-color: var(--theam-light-green-100);
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: var(--theam-green);
+    animation: round 2s linear infinite;
+}
+
+@keyframes round {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+.aside-top .profile .new{
+    position: absolute;
+    top: 90px;
+    left:135px;
+    background-color: var(--theam-green);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: var(--theme-white)
 }
