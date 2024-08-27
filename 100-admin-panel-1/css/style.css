@@ -9,13 +9,15 @@
     --theam-light-green-200: rgba(36, 105, 92, 0.2);
     --theam-green: #24695c;
     --theme-white: #ffffff;
+    --theam-gray: #999999;
     --theme-light-gray: #e6edef;
     --theme-black: #000000;
 }
 
 body {
-    /* font-family: "Heebo", sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 }
+/* font-family: "Roboto", sans-serif; */
 
 
 a {
@@ -117,7 +119,7 @@ ol {
 }
 
 
-/* === Header === */
+/* ======== Header ======== */
 
 header{
     box-shadow: var(--theme-light-gray) 0px 10px 36px 0px, var(--theme-light-gray) 0px 0px 0px 1px;
@@ -178,16 +180,9 @@ header{
    padding-right: 10px;
 }
 
-/* === main === */
-main{
-    width: calc(100% - 300px);
-    margin-left: 300px;
-    padding: 20px;
-    background-color: gold;
-    transition: 0.4s;
-}
 
-/* === aside === */
+
+/* ======== aside ======== */
 aside{
     position: fixed;
     width: 300px;
@@ -206,6 +201,7 @@ aside{
     margin-left: 0px;
 }
 
+/* === aside-top */
 
 .aside-top{
     padding: 24px 0;
@@ -248,6 +244,66 @@ aside{
     background-color: var(--theam-green);
     padding: 2px 4px;
     border-radius: 3px;
+    font-size: 10px;
+    color: var(--theme-white);
+}
+
+.aside-top .profile h5{
+    color: var(--theam-green);
+    margin: 10px 0 5px;
+}
+
+.aside-top .profile p{
+    color: var(--theam-gray);
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0px 0 20px;
+}
+
+.aside-top .count ul {
+    margin: 0 15px;
+    position: relative;
+}
+
+.aside-top .count ul:first-child::after{
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 20px;
+    top: 4px;
+    right: -18px;
+    background-color:var(--theam-light-green-100) ;
+}
+
+.aside-top .count ul:nth-child(2)::after{
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 20px;
+    top: 4px;
+    right: -18px;
+    background-color:var(--theam-light-green-100) ;
+}
+
+.aside-top .count ul li:first-child{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.aside-top .count ul li:last-child{
     font-size: 12px;
-    color: var(--theme-white)
+    font-weight: 500;
+    color: var(--theam-gray);
+}
+
+/* === aside-bottom */
+
+
+/* ======== main ======== */
+main{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    padding: 20px;
+    background-color: gold;
+    transition: 0.4s;
 }
