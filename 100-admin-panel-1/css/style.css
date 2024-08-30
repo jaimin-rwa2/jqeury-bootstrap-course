@@ -212,7 +212,8 @@ aside {
   display: inline;
 }
 
-.aside-top .profile .round {
+.aside-top .profile .round,
+main .about .round {
   position: absolute;
   right: 0;
   margin-right: 40px;
@@ -346,12 +347,12 @@ aside {
   margin-top: 10px;
 }
 
-.aside-bottom .dropdown-item .dropdown-menu{
+.aside-bottom .dropdown-item .dropdown-menu {
   padding: 0 40px;
   display: none;
 }
 
-.aside-bottom .dropdown-item .dropdown-menu li{
+.aside-bottom .dropdown-item .dropdown-menu li {
   padding: 5px 0;
   font-weight: 300;
 }
@@ -361,6 +362,9 @@ main {
   width: calc(100% - 300px);
   margin-left: 300px;
   padding: 20px;
-  background-color: gold;
   transition: 0.4s;
+}
+
+main .about {
+  position: relative;
 }
