@@ -396,3 +396,7 @@ main .about .btn {
   padding: 10px 20px;
   border-radius: 5px;
 }
+
+main .about-box .about-item {
+  margin: 10px 5px 0 0;
+}
